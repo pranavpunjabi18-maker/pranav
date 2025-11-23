@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import textConfig from "../textConfig";
 
-import music1 from "../music/music1.mp3";
-import music2 from "../music/music2.mp3";
-import music3 from "../music/music3.mp3";
-
 import cover1 from "../musiccover/music1.jpg";
 import cover2 from "../musiccover/music2.jpg";
 import cover3 from "../musiccover/music3.jpg";
@@ -23,9 +19,9 @@ interface ChillZoneProps {
 
 export default function ChillZone({ onNext }: ChillZoneProps) {
   const tracks: Track[] = [
-    { id: 1, title: textConfig.chillZone.tracks[0].title, caption: textConfig.chillZone.tracks[0].caption, src: music1, cover: cover1 },
-    { id: 2, title: textConfig.chillZone.tracks[1].title, caption: textConfig.chillZone.tracks[1].caption, src: music2, cover: cover2 },
-    { id: 3, title: textConfig.chillZone.tracks[2].title, caption: textConfig.chillZone.tracks[2].caption, src: music3, cover: cover3 },
+    { id: 1, title: textConfig.chillZone.tracks[0].title, caption: textConfig.chillZone.tracks[0].caption, src: /music/Music1, cover: cover1 },
+    { id: 2, title: textConfig.chillZone.tracks[1].title, caption: textConfig.chillZone.tracks[1].caption, src: /music/Music2, cover: cover2 },
+    { id: 3, title: textConfig.chillZone.tracks[2].title, caption: textConfig.chillZone.tracks[2].caption, src: /music/Music3, cover: cover3 },
   ];
 
   const audioRefs = useRef<Array<HTMLAudioElement | null>>([]);
